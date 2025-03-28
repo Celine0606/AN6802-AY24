@@ -5,7 +5,7 @@ import os
 import google.generativeai as genai
 import wikipedia
 
-api = "AIzaSyCCXOIplLPvb7lvtigD68LNXgRdKUXXjso"
+api=os.getenv("makersuite")
 genai.configure(api_key=api)
 model=genai.GenerativeModel("gemini-1.5-flash")
 app = Flask(__name__)
